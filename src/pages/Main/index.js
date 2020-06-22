@@ -19,7 +19,6 @@ export default function Main() {
 
   let offset = 0;
 
-
   const translateY = new Animated.Value(0);
 
   const animatedEvent = Animated.event(
@@ -48,7 +47,6 @@ export default function Main() {
         offset = 0;
       }
 
-
       Animated.timing(translateY, {
         toValue: opened ? 380 : 0,
         duration: 200,
@@ -65,9 +63,7 @@ export default function Main() {
     <Container>
       <Header />
       <Content>
-
         <Menu translateY={translateY} />
-
 
         <PanGestureHandler
           onGestureEvent={animatedEvent}
@@ -101,8 +97,6 @@ export default function Main() {
             </CardFooter>
           </Card>
         </PanGestureHandler>
-
-
       </Content>
 
       <Tabs translateY={translateY} />
